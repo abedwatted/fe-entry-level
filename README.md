@@ -9,7 +9,7 @@ You can use any resource you like, and ask us questions during the session.
 2.  Prevent duplication in tasks. ( 10pt )
 3.  Fix the `clear completed` action in the footer ( 15pt )
 4.  After doubleClick on an item, clicking enter should exit "edit" (10pt)
-5.  Fix Style issue when inserts a lot of items - add short description for how you approach it (5pt)
+5.  Fix Style issue when inserts a lot of items - add short description for how you approach it (5pt) // I added to the style of the <ul> in the class "todo-list" => overflow: auto
 6.  When launching the app for the first time, the `addItem` input should be in focus (5pt)
 7.  Fix the counter on the footer (5pt)
 8.  Add a code comment explaining what `delegateEvent` function does (10pt)

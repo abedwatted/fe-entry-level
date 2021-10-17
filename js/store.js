@@ -2,13 +2,14 @@ import { emptyItemQuery } from './item.js';
 
 export default class Store {
 
+
 	constructor(name, callback) {
-		const localStorage = window.sessionStorage;
+		const localStorage = window.localStorage;
 
 		let liveTodos;
 
 		this.getLocalStorage = () => {
-			return liveTodos || JSON.parse(localStorage.getItem(name) || '[]');
+			return liveTodos || JSON.parse(localStorage.getItem(name) || '');
 		};
 
 		this.setLocalStorage = (todos) => {
@@ -56,6 +57,12 @@ export default class Store {
 
 	insert(item, callback) {
 		const todos = this.getLocalStorage();
+		for (let el in todos) {
+			if (item.title === todos[el].title) {
+				alert("already exists : " + item.title);
+				return;
+			}
+		}
 		todos.push(item);
 
 		this.setLocalStorage(todos);
